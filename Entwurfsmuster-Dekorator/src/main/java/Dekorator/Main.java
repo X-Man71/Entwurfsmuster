@@ -18,6 +18,7 @@ public class Main
 		System.out.println(getränk.getBeschreibung()+" "+getränk.preis()+" €");
 
 		Getränk getränk2 = new DunkleRöstung();
+		getränk2.setGröße(Größe.Venti);
 		getränk2 = new Schoko(getränk2);
 		getränk2 = new Schoko(getränk2);
 		getränk2 = new Milchschaum(getränk2);

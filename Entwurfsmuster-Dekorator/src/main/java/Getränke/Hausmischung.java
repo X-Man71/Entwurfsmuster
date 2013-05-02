@@ -1,5 +1,7 @@
 package Getränke;
 
+import java.math.BigDecimal;
+
 public class Hausmischung extends Getränk
 {
 	public Hausmischung()
@@ -8,9 +10,9 @@ public class Hausmischung extends Getränk
 	}
 
 	@Override
-	public double preis()
+	public BigDecimal preis()
 	{
-		return 0.89;
+		return new BigDecimal("0.89");
 	}
 
 }

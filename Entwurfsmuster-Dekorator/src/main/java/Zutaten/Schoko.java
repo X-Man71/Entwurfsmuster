@@ -1,5 +1,8 @@
 package Zutaten;
 
+import java.math.BigDecimal;
+
+import Dekorator.Größe;
 import Getränke.Getränk;
 
 public class Schoko extends ZutatenDekorierer
@@ -18,9 +21,33 @@ public class Schoko extends ZutatenDekorierer
 	}
 
 	@Override
-	public double preis()
+	public BigDecimal preis()
 	{
-		return 0.20 + getränk.preis();
+		
+		BigDecimal preis = new BigDecimal("0.20");
+		if (getGröße() != null)
+		{
+			switch (getGröße())
+			{
+			case Tall:
+				preis = new BigDecimal("0.15");
+				break;
+			case Grande:
+				preis = new BigDecimal("0.20");
+				break;
+			case Venti:
+				preis = new BigDecimal("0.25");
+				break;
+			}
+		}
+
+		return preis = preis.add(getränk.preis());
+	}
+	
+	@Override
+	public Größe getGröße()
+	{
+		return getränk.getGröße();
 	}
 
 }
