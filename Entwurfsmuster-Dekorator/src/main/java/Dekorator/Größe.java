@@ -2,5 +2,5 @@ package Dekorator;
 
 public enum Größe
 {
-	Tall, Grande, Venti ; 
+	Tall, Grande, Venti; 
 }
