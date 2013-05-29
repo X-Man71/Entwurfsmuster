@@ -2,7 +2,7 @@ package Fabrik.Koeln;
 
 import Zutaten.Kaese;
 
-public class KoelnerZiegenKäse implements Kaese
+public class KoelnerZiegenKaese implements Kaese
 {
 	@Override
 	public String toString()

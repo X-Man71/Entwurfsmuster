@@ -17,7 +17,7 @@ public class KoelnerPizzaZutatenFabrik implements PizzaZutatenFabrik
 	@Override
 	public Teig erstelleTeig()
 	{
-		return new TeigMitSehrDünnerKruste();
+		return new TeigMitSehrDuennerKruste();
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class KoelnerPizzaZutatenFabrik implements PizzaZutatenFabrik
 	@Override
 	public Kaese erstelleKaese()
 	{
-		return new KoelnerZiegenKäse();
+		return new KoelnerZiegenKaese();
 	}
 
 	@Override
