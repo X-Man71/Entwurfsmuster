@@ -1,10 +1,10 @@
 package Fabrik;
 
-import Zutaten.Gemüse;
+import Zutaten.Gemuese;
 import Zutaten.Krabben;
-import Zutaten.Käse;
+import Zutaten.Kaese;
 import Zutaten.Salami;
-import Zutaten.Soße;
+import Zutaten.Sosse;
 import Zutaten.Teig;
 import Zutaten.Thunfisch;
 
@@ -12,13 +12,13 @@ public interface PizzaZutatenFabrik
 {
 	public Teig erstelleTeig();
 	
-	public Soße erstelleSoße();
+	public Sosse erstelleSoße();
 	
-	public Käse erstelleKäse();
+	public Kaese erstelleKaese();
 	
 	public Salami erstelleSalami();
 	
-	public Gemüse[] erstelleGemüse();
+	public Gemuese[] erstelleGemuese();
 	
 	public Thunfisch erstelleThunfisch();
 	

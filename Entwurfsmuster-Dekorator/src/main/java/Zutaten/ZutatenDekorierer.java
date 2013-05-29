@@ -1,13 +1,14 @@
 package Zutaten;
 
-import Dekorator.Größe;
-import Getränke.Getränk;
+import Dekorator.Groesse;
+import Getraenke.Getraenk;
 
-public abstract class ZutatenDekorierer extends Getränk
+
+public abstract class ZutatenDekorierer extends Getraenk
 {
 	public abstract String getBeschreibung();
 	
-	public abstract Größe getGröße();
+	public abstract Groesse getGroesse();
 	
 
 	

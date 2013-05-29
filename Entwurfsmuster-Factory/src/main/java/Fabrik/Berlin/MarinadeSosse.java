@@ -1,8 +1,8 @@
 package Fabrik.Berlin;
 
-import Zutaten.Soße;
+import Zutaten.Sosse;
 
-public class MarinadeSoße implements Soße
+public class MarinadeSosse implements Sosse
 {
 	@Override
 	public String toString(){

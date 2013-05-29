@@ -2,13 +2,13 @@ package Fabrik.Berlin;
 
 import Fabrik.PizzaZutatenFabrik;
 import Zutaten.Artischoken;
-import Zutaten.Gemüse;
+import Zutaten.Gemuese;
 import Zutaten.Karotten;
 import Zutaten.Krabben;
-import Zutaten.Käse;
+import Zutaten.Kaese;
 import Zutaten.Oberschienen;
 import Zutaten.Salami;
-import Zutaten.Soße;
+import Zutaten.Sosse;
 import Zutaten.Teig;
 import Zutaten.Thunfisch;
 
@@ -20,17 +20,17 @@ public class BerlinerPizzaZutatenFabrik implements PizzaZutatenFabrik
 	@Override
 	public Teig erstelleTeig()
 	{
-		return new TeigMitDünnerKruste();
+		return new TeigMitDuennerKruste();
 	}
 
 	@Override
-	public Soße erstelleSoße()
+	public Sosse erstelleSoße()
 	{
-		return new MarinadeSoße();
+		return new MarinadeSosse();
 	}
 
 	@Override
-	public Käse erstelleKäse()
+	public Kaese erstelleKaese()
 	{
 		return new Parmesan();
 	}
@@ -42,9 +42,9 @@ public class BerlinerPizzaZutatenFabrik implements PizzaZutatenFabrik
 	}
 
 	@Override
-	public Gemüse[] erstelleGemüse()
+	public Gemuese[] erstelleGemuese()
 	{
-		Gemüse gemüse[] = {new Oberschienen(), new Artischoken(), new Karotten()}; 
+		Gemuese gemüse[] = {new Oberschienen(), new Artischoken(), new Karotten()}; 
 		return gemüse;
 	}
 

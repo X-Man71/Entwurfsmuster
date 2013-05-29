@@ -1,4 +1,4 @@
-package Fabrik.Köln;
+package Fabrik.Koeln;
 
 import Fabrik.PizzaZutatenFabrik;
 import Fabrik.Pizzeria;
@@ -9,7 +9,7 @@ import Pizza.SalamiPizza;
 import Pizza.ThunfischPizza;
 import Pizza.VegetarischePizza;
 
-public class KölnerPizzeria extends Pizzeria
+public class KoelnerPizzeria extends Pizzeria
 {
 	@Override
 	protected Pizza erstellePizza(String item)

@@ -2,7 +2,7 @@ package main;
 
 import Fabrik.Pizzeria;
 import Fabrik.Berlin.BerlinerPizzeria;
-import Fabrik.Köln.KölnerPizzeria;
+import Fabrik.Koeln.KoelnerPizzeria;
 import Pizza.Pizza;
 
 
@@ -11,7 +11,7 @@ public class RunPizzeria
 	public static void main(String [] args)
 	{
 		Pizzeria berlinPizzeria = new BerlinerPizzeria();
-		Pizzeria kölnerPizzeria = new KölnerPizzeria();
+		Pizzeria kölnerPizzeria = new KoelnerPizzeria();
  
 		Pizza pizza = berlinPizzeria.bestellePizza("Salami");
 		System.out.println("Ethan hat eine " + pizza.getName() + " bestellt\n");

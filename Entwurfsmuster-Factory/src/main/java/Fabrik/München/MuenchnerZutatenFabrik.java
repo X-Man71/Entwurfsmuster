@@ -1,18 +1,18 @@
 package Fabrik.München;
 
 import Zutaten.Artischoken;
-import Zutaten.Gemüse;
+import Zutaten.Gemuese;
 import Zutaten.Karotten;
 import Zutaten.Krabben;
-import Zutaten.Käse;
+import Zutaten.Kaese;
 import Zutaten.Oberschienen;
 import Zutaten.Salami;
-import Zutaten.Soße;
+import Zutaten.Sosse;
 import Zutaten.Teig;
 import Zutaten.Thunfisch;
 import Fabrik.PizzaZutatenFabrik;
 
-public class MünchnerZutatenFabrik implements PizzaZutatenFabrik
+public class MuenchnerZutatenFabrik implements PizzaZutatenFabrik
 {
 
 	@Override
@@ -22,16 +22,16 @@ public class MünchnerZutatenFabrik implements PizzaZutatenFabrik
 	}
 
 	@Override
-	public Soße erstelleSoße()
+	public Sosse erstelleSoße()
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Käse erstelleKäse()
+	public Kaese erstelleKaese()
 	{
-		return new AlmKäse();
+		return new AlmKaese();
 	}
 
 	@Override
@@ -41,9 +41,9 @@ public class MünchnerZutatenFabrik implements PizzaZutatenFabrik
 	}
 
 	@Override
-	public Gemüse[] erstelleGemüse()
+	public Gemuese[] erstelleGemuese()
 	{
-		Gemüse gemüse[] = {new Karotten(), new Artischoken(), new Oberschienen()};
+		Gemuese gemüse[] = {new Karotten(), new Artischoken(), new Oberschienen()};
 		return gemüse;
 	}
 

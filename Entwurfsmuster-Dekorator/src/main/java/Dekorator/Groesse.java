@@ -1,6 +1,6 @@
 package Dekorator;
 
-public enum Größe
+public enum Groesse
 {
 	Tall, Grande, Venti; 
 }

@@ -18,7 +18,7 @@ public class KrabbenPizza extends Pizza
 		teig = zutatenFabrik.erstelleTeig();
 		soße = zutatenFabrik.erstelleSoße();
 		salami = zutatenFabrik.erstelleSalami();
-		käse = zutatenFabrik.erstelleKäse();
+		käse = zutatenFabrik.erstelleKaese();
 		
 	}
 

@@ -1,8 +1,8 @@
 package Fabrik.Berlin;
 
-import Zutaten.Käse;
+import Zutaten.Kaese;
 
-public class Parmesan implements Käse
+public class Parmesan implements Kaese
 {
 	@Override
 	public String toString()

@@ -1,6 +1,6 @@
 package Zutaten;
 
-public class Artischoken implements Gemüse
+public class Artischoken implements Gemuese
 {
 	@Override
 	public String toString(){

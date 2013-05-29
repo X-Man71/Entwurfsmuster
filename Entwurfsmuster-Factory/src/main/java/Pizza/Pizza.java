@@ -1,10 +1,10 @@
 package Pizza;
 
-import Zutaten.Gemüse;
+import Zutaten.Gemuese;
 import Zutaten.Krabben;
-import Zutaten.Käse;
+import Zutaten.Kaese;
 import Zutaten.Salami;
-import Zutaten.Soße;
+import Zutaten.Sosse;
 import Zutaten.Teig;
 import Zutaten.Thunfisch;
 
@@ -14,13 +14,13 @@ public abstract class Pizza
 	
 	public Teig teig;
 	
-	public Soße soße;
+	public Sosse soße;
 	
 	public Salami salami;
 	
-	public Gemüse gemüse[];
+	public Gemuese gemüse[];
 	
-	public Käse käse;
+	public Kaese käse;
 	
 	public Thunfisch thunfisch;
 	

@@ -1,9 +1,9 @@
 package Dekorator;
 
-import Getränke.DunkleRöstung;
-import Getränke.Espresso;
-import Getränke.Getränk;
-import Getränke.Hausmischung;
+import Getraenke.DunkleRoestung;
+import Getraenke.Espresso;
+import Getraenke.Getraenk;
+import Getraenke.Hausmischung;
 import Zutaten.Milchschaum;
 import Zutaten.Schoko;
 import Zutaten.Soja;
@@ -14,21 +14,21 @@ public class Main
 
 	public static void main(String[] args)
 	{
-		Getränk getränk = new Espresso();
-		System.out.println(getränk.getBeschreibung()+" "+getränk.preis()+" €");
+		Getraenk getraenk = new Espresso();
+		System.out.println(getraenk.getBeschreibung()+" "+getraenk.preis()+" €");
 
-		Getränk getränk2 = new DunkleRöstung();
-		getränk2.setGröße(Größe.Venti);
-		getränk2 = new Schoko(getränk2);
-		getränk2 = new Schoko(getränk2);
-		getränk2 = new Milchschaum(getränk2);
-		System.out.println(getränk2.getBeschreibung()+" "+getränk2.preis()+ " €");
+		Getraenk getraenk2 = new DunkleRoestung();
+		getraenk2.setGroesse(Groesse.Venti);
+		getraenk2 = new Schoko(getraenk2);
+		getraenk2 = new Schoko(getraenk2);
+		getraenk2 = new Milchschaum(getraenk2);
+		System.out.println(getraenk2.getBeschreibung()+" "+getraenk2.preis()+ " €");
 		
-		Getränk getränk3 = new Hausmischung();
-		getränk3 = new Soja(getränk3);
-		getränk3 = new Schoko(getränk3);
-		getränk3 = new Milchschaum(getränk3);
-		System.out.println(getränk3.getBeschreibung()+" "+getränk3.preis()+ " €");
+		Getraenk getraenk3 = new Hausmischung();
+		getraenk3 = new Soja(getraenk3);
+		getraenk3 = new Schoko(getraenk3);
+		getraenk3 = new Milchschaum(getraenk3);
+		System.out.println(getraenk3.getBeschreibung()+" "+getraenk3.preis()+ " €");
 	}
 
 }

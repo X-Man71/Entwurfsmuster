@@ -1,6 +1,6 @@
 package Zutaten;
 
-public interface Soße
+public interface Kaese
 {
 	@Override
 	public String toString();

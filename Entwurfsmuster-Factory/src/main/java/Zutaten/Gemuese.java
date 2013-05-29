@@ -1,6 +1,6 @@
 package Zutaten;
 
-public interface Gemüse
+public interface Gemuese
 {
 	@Override
 	public String toString();

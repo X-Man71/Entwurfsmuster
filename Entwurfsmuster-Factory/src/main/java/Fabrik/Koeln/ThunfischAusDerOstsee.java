@@ -1,4 +1,4 @@
-package Fabrik.Köln;
+package Fabrik.Koeln;
 
 import Zutaten.Thunfisch;
 

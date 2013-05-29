@@ -1,10 +1,10 @@
-package Getränke;
+package Getraenke;
 
 import java.math.BigDecimal;
 
-public class DunkleRöstung extends Getränk
+public class DunkleRoestung extends Getraenk
 {
-	public DunkleRöstung()
+	public DunkleRoestung()
 	{
 		beschreibung = "Dunkleröstung";
 	}

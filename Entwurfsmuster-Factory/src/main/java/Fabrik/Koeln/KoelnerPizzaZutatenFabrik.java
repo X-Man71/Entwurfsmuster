@@ -1,17 +1,17 @@
-package Fabrik.Köln;
+package Fabrik.Koeln;
 
-import Zutaten.Gemüse;
+import Zutaten.Gemuese;
 import Zutaten.Karotten;
 import Zutaten.Krabben;
-import Zutaten.Käse;
+import Zutaten.Kaese;
 import Zutaten.Oberschienen;
 import Zutaten.Salami;
-import Zutaten.Soße;
+import Zutaten.Sosse;
 import Zutaten.Teig;
 import Zutaten.Thunfisch;
 import Fabrik.PizzaZutatenFabrik;
 
-public class KölnerPizzaZutatenFabrik implements PizzaZutatenFabrik
+public class KoelnerPizzaZutatenFabrik implements PizzaZutatenFabrik
 {
 
 	@Override
@@ -21,15 +21,15 @@ public class KölnerPizzaZutatenFabrik implements PizzaZutatenFabrik
 	}
 
 	@Override
-	public Soße erstelleSoße()
+	public Sosse erstelleSoße()
 	{
-		return new BruchettaSoße();
+		return new BruchettaSosse();
 	}
 
 	@Override
-	public Käse erstelleKäse()
+	public Kaese erstelleKaese()
 	{
-		return new KölnerZiegenKäse();
+		return new KoelnerZiegenKäse();
 	}
 
 	@Override
@@ -39,9 +39,9 @@ public class KölnerPizzaZutatenFabrik implements PizzaZutatenFabrik
 	}
 
 	@Override
-	public Gemüse[] erstelleGemüse()
+	public Gemuese[] erstelleGemuese()
 	{
-		Gemüse gemüse[] = {new Oberschienen(), new Karotten()};
+		Gemuese gemüse[] = {new Oberschienen(), new Karotten()};
 		return gemüse;
 	}
 

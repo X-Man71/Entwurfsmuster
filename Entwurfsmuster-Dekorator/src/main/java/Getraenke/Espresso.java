@@ -1,8 +1,8 @@
-package Getränke;
+package Getraenke;
 
 import java.math.BigDecimal;
 
-public class Espresso extends Getränk
+public class Espresso extends Getraenk
 {
 	public Espresso()
 	{

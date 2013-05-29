@@ -2,7 +2,7 @@ package Fabrik.Berlin;
 
 import Zutaten.Teig;
 
-public class TeigMitDünnerKruste implements Teig
+public class TeigMitDuennerKruste implements Teig
 {
 	@Override
 	public String toString(){

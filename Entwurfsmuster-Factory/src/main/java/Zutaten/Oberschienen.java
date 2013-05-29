@@ -1,6 +1,6 @@
 package Zutaten;
 
-public class Oberschienen implements Gemüse
+public class Oberschienen implements Gemuese
 {
 	@Override
 	public String toString(){

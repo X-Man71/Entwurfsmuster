@@ -18,7 +18,7 @@ PizzaZutatenFabrik zutatenFabrik;
 		teig = zutatenFabrik.erstelleTeig();
 		soße = zutatenFabrik.erstelleSoße();
 		salami = zutatenFabrik.erstelleSalami();
-		käse = zutatenFabrik.erstelleKäse();
+		käse = zutatenFabrik.erstelleKaese();
 		
 	}
 }
