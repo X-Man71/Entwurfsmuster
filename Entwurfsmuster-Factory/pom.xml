@@ -9,7 +9,7 @@
 	</parent>
 
 
-	<artifactId>Entwurfsmuster-Dekorator</artifactId>
+	<artifactId>Entwurfsmuster-Factory</artifactId>
 	<packaging>jar</packaging>
 
 

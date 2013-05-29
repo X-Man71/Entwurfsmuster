@@ -10,6 +10,7 @@
 
 	<modules>
 		<module>Entwurfsmuster-Dekorator</module>
+		<module>Entwurfsmuster-Factory</module>
 	</modules>
 
 	<properties>
