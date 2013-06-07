@@ -10,13 +10,23 @@ import Pizza.VegetarischePizza;
 
 public class BerlinerPizzeria extends Pizzeria
 {
-
+	/**
+	 * Typ der Pizza die erstellt werden soll kann als String übergeben werden.
+	 */
 	@Override
 	protected Pizza erstellePizza(String item)
 	{
+		/*
+		 * Es werden Zutatenfabriken erstellt, diese verwenden alle das gemeinsame Interface.
+		 * Es gibt aber für jeden Standort eine andere Fabrik.
+		 * Diese Fabriken werden in die Pizzaklassen übergeben.
+		 * Diese Fabriken beinhalten die eigenarten eines Standorts, mit Dünner Kruste oder ähnliches.
+		 */
+		
 		Pizza pizza = null;
 		PizzaZutatenFabrik zutatenFabrik = 
 			new BerlinerPizzaZutatenFabrik();
+		
  
 		if (item.equals("Salami")) {
   
