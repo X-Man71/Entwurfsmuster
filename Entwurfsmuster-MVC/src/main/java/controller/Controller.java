@@ -35,4 +35,11 @@ public class Controller implements IController
 		
 	}
 
+	@Override
+	public void removeTransactionByIndex(int row)
+	{
+		model.removeTransactionByIndex(row);
+		
+	}
+
 }

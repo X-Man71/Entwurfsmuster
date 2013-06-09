@@ -71,6 +71,15 @@ public class Table implements ActionListener, ViewKomponente, MouseListener
 	{
 		controller.remove(transaktion);
 	}
+	
+	@Override
+	public void removeTransactionByIndex(int row)
+	{
+		controller.removeTransactionByIndex(row);
+		
+	}
+	
+	
 
 	@Override
 	public void updateView()
@@ -111,7 +120,7 @@ public class Table implements ActionListener, ViewKomponente, MouseListener
 	public void mouseReleased(MouseEvent e)
 	{
 		int row = tableJTable.rowAtPoint(e.getPoint());
-		model.removeTransactionByIndex(row);	
+		this.removeTransactionByIndex(row);	
 	}
 
 	@Override
@@ -123,5 +132,7 @@ public class Table implements ActionListener, ViewKomponente, MouseListener
 	public void mouseExited(MouseEvent e)
 	{
 	}
+
+	
 
 }

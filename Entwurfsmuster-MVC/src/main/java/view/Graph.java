@@ -71,6 +71,13 @@ public class Graph implements ViewKomponente
 	{
 		controller.remove(transaktion);
 	}
+	
+	@Override
+	public void removeTransactionByIndex(int row)
+	{
+		// TODO Auto-generated method stub
+		
+	}
 
 	@Override
 	public void updateView()
@@ -129,4 +136,6 @@ public class Graph implements ViewKomponente
 			
 		}
 	}
+
+	
 }
