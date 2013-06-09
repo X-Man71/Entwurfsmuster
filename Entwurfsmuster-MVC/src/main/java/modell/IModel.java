@@ -14,5 +14,7 @@ public interface IModel
 	
 	void remove(Transaction transaktion);
 	
+	void removeTransactionByIndex(int i);
+	
 	List<Transaction> getTransaktions();
 }

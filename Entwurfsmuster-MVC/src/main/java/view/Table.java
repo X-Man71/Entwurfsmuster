@@ -4,17 +4,20 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
 import modell.IModel;
 import controller.IController;
 import entities.Transaction;
 
-public class Table implements ActionListener, ViewKomponente
+public class Table implements ActionListener, ViewKomponente, MouseListener
 {
 	private IController controller;
 	private IModel model;
@@ -41,6 +44,8 @@ public class Table implements ActionListener, ViewKomponente
 		String[] columnNames = { "Beschreibung", "Preis", "Kategorie" };
 		defaultTableModel = new DefaultTableModel(columnNames, 0);
 		tableJTable = new JTable(defaultTableModel);
+		tableJTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		tableJTable.addMouseListener(this);
 		mainContainer.add(new JScrollPane(tableJTable), BorderLayout.NORTH);
 		formTransaction = new FormTransaction();
 		mainContainer.add(formTransaction);
@@ -90,6 +95,33 @@ public class Table implements ActionListener, ViewKomponente
 	public void actionPerformed(ActionEvent e)
 	{
 		add(formTransaction.getTransaction());
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e)
+	{		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e)
+	{		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e)
+	{
+		int row = tableJTable.rowAtPoint(e.getPoint());
+		model.removeTransactionByIndex(row);	
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e)
+	{		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e)
+	{
 	}
 
 }

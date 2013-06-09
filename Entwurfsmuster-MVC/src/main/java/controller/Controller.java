@@ -1,5 +1,6 @@
 package controller;
 
+import view.Graph;
 import view.Table;
 import view.ViewKomponente;
 import modell.IModel;
@@ -16,6 +17,8 @@ public class Controller implements IController
 		this.model = model;
 		tableView = new Table(this, model);
 		tableView.createView();
+		graphView = new Graph(this, model);
+		graphView.createView();
 	}
 
 	@Override

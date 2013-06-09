@@ -29,7 +29,6 @@ public class FormTransaction extends JPanel
 		listPane.setLayout(new BoxLayout(listPane, BoxLayout.LINE_AXIS));
 		listPane.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 10));
 		listPane.add(Box.createHorizontalGlue());
-		;
 		listPane.add(descriptionJTextField);
 		listPane.add(Box.createRigidArea(new Dimension(10, 0)));
 		listPane.add(amountJTextField);

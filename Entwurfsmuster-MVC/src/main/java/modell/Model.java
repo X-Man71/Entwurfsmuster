@@ -14,11 +14,13 @@ public class Model implements IModel
 	public Model()
 	{
 		Transaction transaction1 = new Transaction();
+		transaction1.setId(1);
 		transaction1.setAmount(new BigDecimal(3));
 		transaction1.setCategorie("Nahrungmittel");
 		transaction1.setDescription("Brot");
 		listTransactions.add(transaction1);
 		Transaction transaction2 = new Transaction();
+		transaction2.setId(2);
 		transaction2.setAmount(new BigDecimal(1));
 		transaction2.setCategorie("Nahrungmittel");
 		transaction2.setDescription("Wurst");
@@ -59,6 +61,13 @@ public class Model implements IModel
 		listTransactions.remove(transaktion);
 		notifyObservers();
 	}
+	
+	@Override
+	public void removeTransactionByIndex(int i)
+	{
+		listTransactions.remove(i);
+		notifyObservers();
+	}
 
 	@Override
 	public List<Transaction> getTransaktions()
@@ -66,5 +75,7 @@ public class Model implements IModel
 		List<Transaction> tempListTransactions = listTransactions;
 		return tempListTransactions;
 	}
+
+	
 
 }
