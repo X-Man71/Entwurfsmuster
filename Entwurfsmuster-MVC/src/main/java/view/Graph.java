@@ -39,7 +39,7 @@ public class Graph implements ViewKomponente
 		graphJFrame = new JFrame();
 		JFreeChart chart = ChartFactory.createBarChart("Bar Chart Demo", // chart
 																			// title
-				"Category", // domain axis label
+				"Ausgaben", // domain axis label
 				"Value", // range axis label
 				dataset, // data
 				PlotOrientation.VERTICAL, // orientation
@@ -121,13 +121,12 @@ public class Graph implements ViewKomponente
 			}
 		}
 		
-		int i = 0;
 		for (CategorieAndValue categorieAndValue1 : categorieAndValueList)
 		{
 			//System.out.println(categorieAndValue1.getCategorie());
-			dataset.addValue(categorieAndValue1.getAmount(), "Row " + i,
+			dataset.addValue(categorieAndValue1.getAmount(), categorieAndValue1.getCategorie(),
 					categorieAndValue1.getCategorie());
-			i++;
+			
 		}
 	}
 }
