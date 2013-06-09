@@ -38,17 +38,6 @@ public class FormTransaction extends JPanel
 		listPane.add(sendButton);
 		add(listPane);
 
-		sendButton.addActionListener(new ActionListener()
-		{
-
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				System.out.println("Button");
-
-			}
-		});
-
 	}
 
 	public JButton getButton()

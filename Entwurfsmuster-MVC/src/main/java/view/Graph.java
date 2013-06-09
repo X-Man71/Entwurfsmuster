@@ -75,54 +75,56 @@ public class Graph implements ViewKomponente
 	@Override
 	public void updateView()
 	{
-		boolean addEnty = false;
 		List<CategorieAndValue> categorieAndValueList = new ArrayList<CategorieAndValue>();
+		List<String> listCage = new ArrayList<String>();
 
 		for (int i = dataset.getRowCount() - 1; i >= 0; i--)
 		{
 			dataset.removeRow(i);
+			
 		}
+		for (int i = dataset.getColumnCount() - 1; i >= 0; i--)
+		{
+			dataset.removeColumn(i);
+			
+		}
+	
 		for (Transaction tran: model.getTransaktions())
 		{			
-			if(categorieAndValueList.isEmpty())
-			{
+			if(!listCage.contains(tran.getCategorie()))
+			{ 
+				//Kategorie noch nicht vorhanden
+				listCage.add(tran.getCategorie());
 				CategorieAndValue categorieAndValue = new CategorieAndValue();
 				categorieAndValue.setAmount(tran.getAmount());
 				categorieAndValue.setCategorie(tran.getCategorie());
 				categorieAndValueList.add(categorieAndValue);
-			}
-			for(int j = 0; j < categorieAndValueList.size(); j++)
+			}	
+			else
 			{
-				if(categorieAndValueList.get(j).getCategorie().equals(tran.getCategorie()))
+				//Kategorie bereits vorhanden
+				for (int i = 0; i < categorieAndValueList.size(); i++) 
 				{
-					CategorieAndValue andValue = new CategorieAndValue();
-					BigDecimal bigDecimal = categorieAndValueList.get(j).getAmount();
-					bigDecimal = bigDecimal.add(tran.getAmount());
-					andValue.setAmount(bigDecimal);
-					andValue.setCategorie(categorieAndValueList.get(j).getCategorie());
-					
-					categorieAndValueList.set(j, andValue);
+				    if(categorieAndValueList.get(i).getCategorie().equals(tran.getCategorie()))
+				    {
+				    	BigDecimal bigDecimal;
+				    	bigDecimal = categorieAndValueList.get(i).getAmount();
+				    	bigDecimal = bigDecimal.add(tran.getAmount());
+				    	
+				       CategorieAndValue cat = new CategorieAndValue();
+				       cat.setAmount(bigDecimal);
+				       cat.setCategorie(tran.getCategorie());
+				       categorieAndValueList.set(i, cat);
+				    }
 				}
-				else
-				{
-					addEnty = true;
-				}
+				
 			}
-			if(addEnty)
-			{
-				CategorieAndValue categorieAndValue = new CategorieAndValue();
-				categorieAndValue.setAmount(tran.getAmount());
-				categorieAndValue.setCategorie(tran.getCategorie());
-				categorieAndValueList.add(categorieAndValue);
-				addEnty = false;				
-			}
-			
-			
 		}
+		
 		int i = 0;
 		for (CategorieAndValue categorieAndValue1 : categorieAndValueList)
 		{
-			System.out.println(categorieAndValue1.getCategorie());
+			//System.out.println(categorieAndValue1.getCategorie());
 			dataset.addValue(categorieAndValue1.getAmount(), "Row " + i,
 					categorieAndValue1.getCategorie());
 			i++;
