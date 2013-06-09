@@ -2,7 +2,8 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
-import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -14,7 +15,7 @@ import modell.IModel;
 import controller.IController;
 import entities.Transaction;
 
-public class Table extends ViewKomponente
+public class Table extends ViewKomponente implements ActionListener
 {
 	private IController controller;
 	private IModel model;
@@ -23,6 +24,8 @@ public class Table extends ViewKomponente
 	private JPanel tableJPanel;
 	private DefaultTableModel defaultTableModel;
 	private Container mainContainer;
+	
+	private FormTransaction formTransaction;
 
 	public Table(IController controller, IModel model)
 	{
@@ -40,25 +43,30 @@ public class Table extends ViewKomponente
 		String[] columnNames = { "Beschreibung", "Preis", "Kategorie" };
 		defaultTableModel = new DefaultTableModel(columnNames, 0);
 		tableJTable = new JTable(defaultTableModel);
-
 		mainContainer.add(new JScrollPane(tableJTable), BorderLayout.NORTH);
+		formTransaction = new FormTransaction();
+		mainContainer.add(formTransaction);
+		
 		tableJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		tableJFrame.pack();
 		tableJFrame.setTitle("JTable Beispiel");
 		tableJFrame.setVisible(true);
+		
 		updateView();
+		
+		formTransaction.getButton().addActionListener(this);
 	}
 
 	@Override
 	public void add(Transaction transaktion)
 	{
-		super.add(transaktion);
+		controller.add(transaktion);
 	}
 
 	@Override
 	public void remove(Transaction transaktion)
 	{
-		super.remove(transaktion);
+		controller.remove(transaktion);
 	}
 
 	@Override
@@ -73,6 +81,12 @@ public class Table extends ViewKomponente
 					transaction.getCategorie() });
 		}
 
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		add(formTransaction.getTransaction());	
 	}
 
 }

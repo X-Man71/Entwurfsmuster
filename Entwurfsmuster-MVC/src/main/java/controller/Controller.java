@@ -16,7 +16,6 @@ public class Controller implements IController
 		this.model = model;
 		tableView = new Table(this, model);
 		tableView.createView();
-		graphView = new Table(this, model);
 	}
 
 	@Override

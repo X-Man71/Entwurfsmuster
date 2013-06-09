@@ -39,6 +39,15 @@ public class Transaction
 	{
 		Categorie = categorie;
 	}
+
+	@Override
+	public String toString()
+	{
+		return "Transaction [description=" + description + ", amount=" + amount
+				+ ", Categorie=" + Categorie + "]";
+	}
+	
+	
 	
 	
 }
