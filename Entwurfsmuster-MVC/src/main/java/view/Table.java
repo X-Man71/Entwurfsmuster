@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -15,16 +14,15 @@ import modell.IModel;
 import controller.IController;
 import entities.Transaction;
 
-public class Table extends ViewKomponente implements ActionListener
+public class Table implements ActionListener, ViewKomponente
 {
 	private IController controller;
 	private IModel model;
 	private JFrame tableJFrame;
 	private JTable tableJTable;
-	private JPanel tableJPanel;
 	private DefaultTableModel defaultTableModel;
 	private Container mainContainer;
-	
+
 	private FormTransaction formTransaction;
 
 	public Table(IController controller, IModel model)
@@ -46,14 +44,14 @@ public class Table extends ViewKomponente implements ActionListener
 		mainContainer.add(new JScrollPane(tableJTable), BorderLayout.NORTH);
 		formTransaction = new FormTransaction();
 		mainContainer.add(formTransaction);
-		
+
 		tableJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		tableJFrame.pack();
 		tableJFrame.setTitle("JTable Beispiel");
 		tableJFrame.setVisible(true);
-		
+
 		updateView();
-		
+
 		formTransaction.getButton().addActionListener(this);
 	}
 
@@ -72,9 +70,14 @@ public class Table extends ViewKomponente implements ActionListener
 	@Override
 	public void updateView()
 	{
-		super.updateView();
+		for (int i = defaultTableModel.getRowCount() - 1; i >= 0; i--)
+		{
+			defaultTableModel.removeRow(i);
+		}
+
 		for (Transaction transaction : model.getTransaktions())
 		{
+
 			defaultTableModel.addRow(new Object[] {
 					transaction.getDescription(),
 					transaction.getAmount().toString(),
@@ -86,7 +89,7 @@ public class Table extends ViewKomponente implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
-		add(formTransaction.getTransaction());	
+		add(formTransaction.getTransaction());
 	}
 
 }

@@ -2,25 +2,25 @@ package view;
 
 import entities.Transaction;
 
-public class Graph extends ViewKomponente
+public class Graph implements ViewKomponente
 {
 
 	@Override
 	public void add(Transaction transaktion)
 	{
-		super.add(transaktion);
+		
 	}
 
 	@Override
 	public void remove(Transaction transaktion)
 	{
-		super.remove(transaktion);
+	
 	}
 
 	@Override
 	public void updateView()
 	{
-		super.updateView();
+	
 	}
 
 	@Override
