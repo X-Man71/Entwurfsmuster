@@ -12,6 +12,7 @@
 		<module>Entwurfsmuster-Dekorator</module>
 		<module>Entwurfsmuster-Factory</module>
 		<module>Entwurfsmuster-MVC</module>
+		<module>Entwurfsmuster-RMI</module>
 	</modules>
 
 	<properties>
